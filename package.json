@@ -2,7 +2,7 @@
   "name": "dem-ui-grid",
   "version": "0.0.1",
   "description": "Bootstrap-like grid package for react",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
 
   },
