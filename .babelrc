@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "react",
+    "stage-1",
+    ["es2015", { "modules": false, "loose": true }]
+  ],
+  "plugins": [
+    "transform-react-remove-prop-types",
+    "transform-react-router-optimize",
+    "transform-class-properties"
+  ]
+}
