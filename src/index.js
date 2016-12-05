@@ -1,4 +1,4 @@
-export Container from './Container';
-export Row from './Row';
-export Column from './Column';
-export Hidden from './Hidden';
+export { default as Container } from './Container';
+export { default as Row } from './Row';
+export { default as Column } from './Column';
+export { default as Hidden } from './Hidden';
