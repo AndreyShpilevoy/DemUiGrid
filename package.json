@@ -1,6 +1,6 @@
 {
   "name": "dem-ui-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bootstrap-like grid package for react",
   "author": "Andrey Shpilevoy aka kto",
   "license": "MIT",
@@ -8,11 +8,30 @@
   "scripts": {
     "clean": "rimraf lib",
     "lint": "eslint src",
-    "build": "npm run clean && npm run lint && cpx \"src/**/*.scss\" lib && babel src --out-dir lib"
+    "test": "jest --no-cache",
+    "build": "npm run clean && npm run lint && npm run test && cpx \"src/**/*.scss\" lib && babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/AndreyShpilevoy/DemUiGrid.git"
+  },
+  "jest": {
+    "transform": {
+      ".css": "<rootDir>/node_modules/jest-css-modules",
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "testRegex": "(.*/__tests__/.*|\\.(test|spec))\\.js|.jsx",
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   },
   "devDependencies": {
     "babel-cli": "6.18.0",
@@ -23,12 +42,15 @@
     "babel-preset-react": "6.16.0",
     "babel-preset-stage-0": "6.16.0",
     "cpx": "1.5.0",
+    "enzyme": "2.6.0",
     "eslint": "3.11.1",
     "eslint-config-airbnb-base": "10.0.1",
     "eslint-import-resolver-babel-module": "2.2.1",
     "eslint-loader": "1.6.1",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-react": "6.8.0"
+    "eslint-plugin-react": "6.8.0",
+    "jest-cli": "17.0.3",
+    "jest-css-modules": "1.1.0"
   },
   "dependencies": {
     "react": "15.4.1",
