@@ -1,6 +1,6 @@
 {
   "name": "dem-ui-grid",
-  "version": "0.0.6",
+  "version": "0.0.5",
   "description": "Bootstrap-like grid package for react",
   "author": "Andrey Shpilevoy aka kto",
   "license": "MIT",
