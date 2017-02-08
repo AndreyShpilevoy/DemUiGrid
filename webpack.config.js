@@ -8,13 +8,13 @@ const PostcssInitial = require('postcss-initial');
 const cssnano = require('cssnano');
 
 const entryPoints = {
-  vendor: [
-    'react',
-    'react-dom'
-  ],
   js: ['./src/index']
 };
 
+const externals = {
+  react: 'React',
+  'react-dom': 'ReactDOM'
+};
 const output = {filename: 'index.js'};
 output.path = './lib';
 
@@ -73,11 +73,6 @@ const postcss = [
 ];
 
 const plugins = [
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    minChunks: Infinity,
-    filename: 'vendor.bundle.js'
-  }),
   new webpack.LoaderOptionsPlugin({
     debug: false,
     noInfo: true,
@@ -108,6 +103,7 @@ const plugins = [
 //For all environments
 module.exports = {
   entry: entryPoints,
+  externals: externals,
   target: 'web',
   output: output,
   module: {
