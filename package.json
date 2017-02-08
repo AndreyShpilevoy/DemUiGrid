@@ -1,6 +1,6 @@
 {
   "name": "dem-ui-grid",
-  "version": "0.0.7",
+  "version": "0.0.6",
   "description": "Bootstrap-like grid package for react",
   "author": "Andrey Shpilevoy aka kto",
   "license": "MIT",
@@ -59,16 +59,14 @@
     "node-sass": "4.5.0",
     "postcss-initial": "1.5.3",
     "postcss-loader": "1.2.2",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
     "resolve-url-loader": "1.6.1",
     "sass-loader": "5.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "2.2.1"
   },
-  "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+  "dependencies": {
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   }
 }
