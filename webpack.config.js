@@ -11,10 +11,6 @@ const entryPoints = {
   js: ['./src/index']
 };
 
-const externals = {
-  react: 'React',
-  'react-dom': 'ReactDOM'
-};
 const output = {filename: 'index.js'};
 output.path = './lib';
 
@@ -103,7 +99,6 @@ const plugins = [
 //For all environments
 module.exports = {
   entry: entryPoints,
-  externals: externals,
   target: 'web',
   output: output,
   module: {
