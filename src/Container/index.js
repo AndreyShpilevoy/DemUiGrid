@@ -15,9 +15,8 @@ class Container extends React.Component {
     style: {},
   }
 
-  constructor(props){
-    super(props);
-      this.setState({componentClassName: this.props.fluid  ? styles.containerFluid : styles.container});
+  state = {
+    componentClassName: this.props.fluid ? styles.containerFluid : styles.container,
   }
 
   render() {
