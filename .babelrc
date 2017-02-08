@@ -2,11 +2,22 @@
   "presets": [
     "react",
     "stage-1",
-    "es2015"
+    ["es2015", { "modules": false, "loose": true }]
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-react-remove-prop-types",
-    "transform-react-router-optimize"
-  ]
+    "transform-class-properties"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-runtime"
+      ]
+    }
+  }
 }

@@ -15,8 +15,9 @@ class Row extends React.Component {
     style: {},
   }
 
-  state = {
-    componentClassName: this.props.reverse  ? `${styles.row} ${styles.reverse}` : styles.row,
+  constructor(props){
+    super(props);
+      this.setState({componentClassName: this.props.reverse  ? `${styles.row} ${styles.reverse}` : styles.row});
   }
 
   render() {

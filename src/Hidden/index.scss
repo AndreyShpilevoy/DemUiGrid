@@ -4,12 +4,12 @@
 @each $breakpoint, $size-min, $size-max in $grid-breakpoints-min-max-container {
   @media ($size-min) {
     .hidden-#{$breakpoint}-up{
-      display: none !important;
+      display: none !important; //sass-lint:disable-line no-important
     }
   }
   @media ($size-max) {
     .hidden-#{$breakpoint}-down{
-      display: none !important;
+      display: none !important; //sass-lint:disable-line no-important
     }
   }
 }

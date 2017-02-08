@@ -2,8 +2,8 @@
 
 .container,
 .containerFluid {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 @each $breakpoint, $size-min, $size-max, $container in $grid-breakpoints-min-max-container {
